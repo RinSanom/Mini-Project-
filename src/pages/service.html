@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+      .font-pacifico {
+        font-family: "Pacifico", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="sticky top-0 z-50">
+      <nav
+        id="main-header"
+        class="absolute left-0 right-0 transition-colors duration-300 p-4 text-white">
+        <div
+          class="container mx-auto flex flex-wrap justify-between items-center px-6 lg:px-20">
+          <div
+            class="text-3xl font-bold text-[#fea116] flex items-center mb-4 md:mb-0">
+            <img
+              src="../../images/RestronLogo.png"
+              alt=""
+              class="h-12 mr-2"
+              style="
+                filter: brightness(0) saturate(100%) invert(48%) sepia(92%)
+                  saturate(748%) hue-rotate(1deg) brightness(102%)
+                  contrast(102%);
+              " />
+            Restoran
+          </div>
+
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <div
+            id="nav-links"
+            class="hidden md:flex flex-grow justify-end items-center w-full md:w-auto md:space-x-8 absolute md:relative top-full left-0 right-0 bg-gray-800 md:bg-transparent p-4 md:p-0 z-40">
+            <ul
+              class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 w-full md:w-auto">
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >HOME</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >SERVICE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./src/pages/menu.html"
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >MENU</a
+                >
+              </li>
+              <li class="relative group">
+                <a
+                  href="#"
+                  class="py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md flex items-center justify-between w-full"
+                  >PAGES
+                  <svg
+                    class="ml-1 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </a>
+                <div
+                  class="absolute top-full left-0 z-30 min-w-[120px] bg-white text-gray-800 rounded-md shadow-lg p-2 hidden group-hover:block">
+                  <ul>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-300 rounded-md"
+                        >Booking</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-300 rounded-md"
+                        >Our Team</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-300 rounded-md"
+                        >Testimonial</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-[#feaf39] hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+
+            <button
+              id="btn"
+              class="bg-[#fea116] text-white font-bold px-4 py-2 rounded-md hover:bg-yellow-600 transition duration-300 mt-4 md:mt-0 w-full md:w-auto">
+              BOOK A TABLE
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="relative bg-cover bg-center h-96 flex justify-center items-center px-4 md:px-[120px] py-16"
+        style="background-image: url('/images/bg-hero.jpg')">
+        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+        <div class="relative z-10 max-w-xl text-white mt-8 md:mt-0">
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-4 leading-tight text-center">
+            Service
+          </h1>
+          <p>
+            <a class="text-[#FEAF39]" href="/index.html">HOME</a> /
+            <a class="text-[#FEAF39]" href="#">PAGES</a> / SERVICES
+          </p>
+        </div>
+      </section>
+
+      <section class="mx-14 md:mx-20 lg:mx-28 xl:mx-[120px]">
+        <section class="p-2 md:p-4 lg:p-7 xl:p-10">
+          <div>
+            <div class="flex justify-center items-center">
+              <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+              <h5
+                class="text-[#FEAF39] text-[16px] mx-3 font-semibold font-pacifico">
+                Our Services
+              </h5>
+              <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            </div>
+            <h2
+              class="text-lg text-center md:text-xl lg:text-5xl xl:text-3xl my-8 font-bold">
+              Explore our services
+            </h2>
+            <div>
+              <div
+                class="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <!-- card1 -->
+                <a href="#master_chefs">
+                  <div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-user-tie fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">Master Chefs</h3>
+                      <p class="text-[16px]">
+                        Experience culinary excellence crafted by our
+                        world-class chefs with years of expertise and passion in
+                        every dish.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- card2 -->
+                <a href="#Quality_food">
+                  <div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-utensils fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">Quality Food</h3>
+                      <p class="text-[16px] line-clamp-4">
+                        We serve only the freshest ingredients, cooked to
+                        perfection to give you a delightful and memorable ....
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- card3 -->
+                <a href="#healthy_options"
+                  ><div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-cart-plus fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">Online Order</h3>
+                      <p class="text-[16px]">
+                        Order your favorite meals with ease through our seamless
+                        online platform—fast, convenient, and reliable.
+                      </p>
+                    </div>
+                  </div></a
+                >
+                <!-- card4 -->
+                <a href="#24/7 Service">
+                  <div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-headset fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">Service</h3>
+                      <p class="text-[16px]">
+                        We’re here for you anytime, day or night. Enjoy our full
+                        range of services and support whenever you need it.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- card5 -->
+                <a href="#Fast_delivery">
+                  <div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-motorcycle fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">Fast Delivery</h3>
+                      <p class="text-[16px]">
+                        Enjoy hot, delicious meals delivered straight to your
+                        doorstep in record time—freshness guaranteed.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- card6 -->
+                <a href="#top_rated">
+                  <div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-trophy fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">
+                        Top-rated Service
+                      </h3>
+                      <p class="text-[16px] line-clamp-4">
+                        We’re proud to be rated among the best by our customers
+                        for exceptional quality and friendly support.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!-- card7 -->
+                <a href="#healthy_options"
+                  ><div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-leaf fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">
+                        Healthy Options
+                      </h3>
+                      <p class="text-[16px]">
+                        Choose from a variety of nutritious and well-balanced
+                        meals made to support your lifestyle and wellness.
+                      </p>
+                    </div>
+                  </div></a
+                >
+                <!-- card8 -->
+                <a href="#reservation">
+                  <div
+                    class="group bg-gray-50 p-4 gap-4 hover:bg-[#FEAF39] hover:text-white transition-colors duration-300">
+                    <i
+                      class="fa-solid fa-mobile fa-xl text-[#FEAF39] group-hover:text-white transition-colors duration-300"></i>
+
+                    <div class="mt-4">
+                      <h3 class="mb-3 text-xl font-semibold">
+                        Easy Reservation
+                      </h3>
+                      <p class="text-[16px]">
+                        Book your table in just a few clicks with our simple
+                        online reservation system—quick, easy, and hassle-free.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="h-[2px] w-full bg-[#FEAF39]"></div>
+      </section>
+
+      <section class="mx-14 md:mx-20 lg:mx-28 xl:mx-[120px] px-2 md:p-10">
+        <!-- Master Chefs -->
+        <section id="master_chefs">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx-3 font-pacifico">
+              Master Chefs
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <div class="w-full md:w-2/4 p-1">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl xl:text-3xl font-semibold my-8">
+                Experience Culinary Excellence
+              </h2>
+              <p>
+                Our master chefs are not just cooks—they're artists. With years
+                of international and local experience, they blend traditional
+                techniques with modern creativity to craft extraordinary meals.
+                Each dish is prepared with precision, passion, and a deep
+                understanding of flavor. Whether you're enjoying a gourmet
+                dinner or a casual lunch, our chefs ensure it’s an unforgettable
+                experience.
+              </p>
+            </div>
+            <div
+              class="max-w-lg mx-auto bg-gray-50 p-6 rounded-lg shadow-md text-center">
+              <img
+                src="/images/team-1.jpg"
+                alt="Chef"
+                class="w-32 h-32 mx-auto rounded-full object-cover" />
+              <h3 class="text-xl font-bold mt-4">Full Name</h3>
+              <p class="text-gray-600">Designation</p>
+
+              <div class="flex justify-center gap-4 mt-4 text-xl text-black">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Quality Food -->
+        <section id="Quality_food">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx-3 font-pacifico">
+              Quality Food
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <img
+              class="w-72 h-auto p-5"
+              src="/images/quality_food.png"
+              alt="Quality_food" />
+            <div class="w-full md:w-2/4 p-1">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl xl:text-3xl my-8 font-semibold">
+                Only the Best on Your Plate
+              </h2>
+              <p>
+                We believe quality food starts with quality ingredients. That's
+                why we source fresh, seasonal produce, high-grade meats, and
+                authentic spices. Our commitment to freshness and hygiene is
+                reflected in every bite. From the first taste to the last,
+                you'll notice the care and attention we put into everything we
+                serve.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- healthy Options -->
+        <section id="Online_order">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx-3 font-pacifico">
+              Online Order
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <div class="w-full md:w-2/4 p-1">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl xl:text-3xl font-semibold my-8">
+                Order Easily, Eat Happily
+              </h2>
+              <p>
+                Busy day? No problem. Our online ordering system is designed for
+                convenience and speed. With just a few clicks, you can browse
+                the menu, customize your order, and choose your preferred
+                delivery time. Secure payment options and order tracking make
+                the experience smooth from start to finish.
+              </p>
+            </div>
+            <img
+              class="w-72 h-auto p-5"
+              src="/images/online_service.png"
+              alt="Online_order" />
+          </div>
+        </section>
+        <!-- 24/7 Service -->
+        <section id="24/7_service">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx- font-pacifico">
+              24/7 Service
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <img
+              class="w-72 h-auto p-5"
+              src="/images/24_service.png"
+              alt="24/7_service" />
+            <div class="w-full md:w-2/4 p-1">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl xl:text-3xl font-semibold my-8">
+                We’re Always Here for You
+              </h2>
+              <p>
+                Craving something late at night? Hosting an early brunch? Our
+                24/7 service ensures you’re never left waiting. Whether you need
+                support, want to place an order, or have questions, our friendly
+                team is ready to assist you—anytime, any day.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Online Fast Deliverye Order -->
+        <section id="Fast_delivery">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx-3 font-pacifico">
+              Online Fast Deliverye Order
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <div class="w-2/3">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl font-semibold xl:text-3xl my-8">
+                Order Easily, Eat Happily
+              </h2>
+              <p>
+                Busy day? No problem. Our online ordering system is designed for
+                convenience and speed. With just a few clicks, you can browse
+                the menu, customize your order, and choose your preferred
+                delivery time. Secure payment options and order tracking make
+                the experience smooth from start to finish.
+              </p>
+            </div>
+            <img
+              class="w-72 h-auto p-5"
+              src="/images/delivery.png"
+              alt="Online_order" />
+          </div>
+        </section>
+        <!-- Top-rated Service -->
+        <section id="top_rated">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx-3 font-pacifico">
+              Top-rated Service
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <img
+              class="w-72 h-auto p-5"
+              src="/images/top_rated_service.png"
+              alt="Quality_food" />
+            <div class="w-full md:w-2/4 p-1">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl xl:text-3xl font-semibold my-8">
+                Trusted and Loved by Many
+              </h2>
+              <p>
+                Your satisfaction is our greatest reward. We've earned top
+                ratings thanks to our consistent service, quality food, and warm
+                hospitality. We listen to our customers, value your feedback,
+                and constantly improve to serve you better every day.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--  Healthy Options -->
+        <section id="healthy_options">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx-3 font-pacifico">
+              Healthy Options
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <div class="w-full md:w-2/4 p-1">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl xl:text-3xl font-semibold my-8">
+                Delicious Meets Nutritious
+              </h2>
+              <p>
+                Eating healthy doesn't mean sacrificing flavor. Our menu
+                features a range of nutritious meals made with natural
+                ingredients and cooked in healthy oils. From low-carb dishes to
+                vegetarian delights, you’ll find tasty options that support your
+                lifestyle and dietary needs.
+              </p>
+            </div>
+            <img
+              class="w-72 h-auto p-5"
+              src="/images/healthy.png"
+              alt="Online_order" />
+          </div>
+        </section>
+        <!--  Easy Reservation -->
+        <section id="reservation">
+          <div class="flex justify-center items-center">
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+            <h5 class="text-[#FEAF39] text-[16px] mx-3 font-pacifico">
+              Easy Reservation
+            </h5>
+            <div class="h-[2px] w-16 bg-[#FEAF39] text-blue-300"></div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between gap-8">
+            <img
+              class="w-72 h-auto p-5"
+              src="/images/reservation.png"
+              alt="24/7_service" />
+            <div class="w-full md:w-2/4 p-1">
+              <h2
+                class="text-lg md:text-xl lg:text-5xl xl:text-3xl font-semibold my-8">
+                Plan Ahead with Ease
+              </h2>
+              <p>
+                Avoid the wait and reserve your spot ahead of time. Our online
+                reservation tool lets you book a table in seconds. Whether
+                you're celebrating something special or simply planning a meal
+                out, we’ll make sure your table is ready and waiting.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="bg-[#1a202c] text-gray-300 py-10">
+      <div class="container mx-auto px-8">
+        <div class="flex flex-wrap justify-between -mx-4">
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Company <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <ul>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Contact Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Reservation</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Terms & Condition</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Contact <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <ul>
+              <li class="mb-2 flex items-center">
+                <i class="fas fa-map-marker-alt text-[#fea116] mr-2"></i>Rupp,
+                Phnom Penh
+              </li>
+              <li class="mb-2 flex items-center">
+                <i class="fas fa-phone-alt text-[#fea116] mr-2"></i>096 429 6602
+              </li>
+              <li class="mb-2 flex items-center">
+                <i class="fas fa-envelope text-[#fea116] mr-2"></i
+                >restoran@gmail.com
+              </li>
+            </ul>
+            <div class="flex space-x-4 mt-4">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Opening <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <ul>
+              <li class="mb-2">Monday - Saturday</li>
+              <li class="mb-2">09AM - 09PM</li>
+              <li class="mb-2">Sunday</li>
+              <li class="mb-2">10AM - 08PM</li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 px-4">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Newsletter <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <p class="mb-4">
+              Dolor amet sit justo amet elitr clita ipsum elitrest.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="py-2 px-4 rounded-l-md flex-grow focus:outline-none text-gray-800" />
+              <button
+                class="bg-[#fea116] text-white py-2 px-4 rounded-r-md hover:bg-[#e09012]">
+                SIGNUP
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-wrap justify-between items-center text-sm">
+          <div class="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
+            &copy; Restoran, All Right Reserved. Designed By
+            <a href="#" class="text-[#fea116] hover:underline">Restoran</a>
+          </div>
+          <div class="w-full md:w-auto text-center md:text-right">
+            <a href="#" class="text-gray-300 hover:text-white mx-2">Home</a>
+            <span class="text-gray-300 px-2">|</span>
+            <a href="#" class="text-gray-300 hover:text-white mx-2">Cookies</a>
+            <span class="text-gray-300 px-2">|</span>
+            <a href="#" class="text-gray-300 hover:text-white mx-2">Help</a>
+            <span class="text-gray-300 px-2">|</span>
+            <a href="#" class="text-gray-300 hover:text-white mx-2">FQAS</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/index.js"></script>
+</html>
