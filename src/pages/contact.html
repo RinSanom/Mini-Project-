@@ -3,138 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant Contact Us</title>
+    <title>Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body class="bg-gray-100">
-    <nav class="absolute top-0 left-0 right-0 text-white p-4 z-50">
-      <div
-        class="container mx-auto flex flex-wrap justify-between items-center px-4">
+    <header class="sticky top-0 z-50">
+      <nav
+        id="main-header"
+        class="absolute left-0 right-0 transition-colors duration-300 p-4 text-white">
         <div
-          class="text-3xl font-bold text-[#fea116] flex items-center mb-4 md:mb-0">
-          <img
-            src="../../images/RestronLogo.png"
-            alt=""
-            class="h-12 mr-2"
-            style="
-              filter: brightness(0) saturate(100%) invert(48%) sepia(92%)
-                saturate(748%) hue-rotate(1deg) brightness(102%) contrast(102%);
-            " />
-          Restoran
-        </div>
+          class="container mx-auto flex flex-wrap justify-between items-center px-6 lg:px-20">
+          <div
+            class="text-3xl font-bold text-[#fea116] flex items-center mb-4 md:mb-0">
+            <img
+              src="../../images/RestronLogo.png"
+              alt=""
+              class="h-12 mr-2"
+              style="
+                filter: brightness(0) saturate(100%) invert(48%) sepia(92%)
+                  saturate(748%) hue-rotate(1deg) brightness(102%)
+                  contrast(102%);
+              " />
+            Restoran
+          </div>
 
-        <button
-          id="mobile-menu-button"
-          class="md:hidden text-white focus:outline-none">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-
-        <div
-          id="nav-links"
-          class="hidden md:flex flex-grow justify-end items-center w-full md:w-auto md:space-x-8 absolute md:relative top-full left-0 right-0 bg-gray-800 md:bg-transparent p-4 md:p-0 z-40">
-          <ul
-            class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 w-full md:w-auto">
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
-                >HOME</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
-                >ABOUT</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
-                >SERVICE</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
-                >MENU</a
-              >
-            </li>
-            <li class="relative group">
-              <a
-                href="#"
-                class="py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md flex items-center justify-between w-full"
-                >PAGES
-                <svg
-                  class="ml-1 w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"></path></svg
-              ></a>
-              <div
-                class="absolute top-full left-0 z-30 min-w-[120px] bg-white text-gray-800 rounded-md shadow-lg p-2 hidden group-hover:block">
-                <ul>
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-300 rounded-md"
-                      >Booking</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-300 rounded-md"
-                      >Our Team</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-300 rounded-md"
-                      >Testimonial</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-4 text-[#feaf39] hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
-                >CONTACT</a
-              >
-            </li>
-          </ul>
           <button
-            class="bg-[#fea116] text-white font-bold px-4 py-2 rounded-md hover:bg-yellow-600 transition duration-300 mt-4 md:mt-0 w-full md:w-auto">
-            BOOK A TABLE
+            id="mobile-menu-button"
+            class="md:hidden text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
           </button>
+
+          <div
+            id="nav-links"
+            class="hidden md:flex flex-grow justify-end items-center w-full md:w-auto md:space-x-8 absolute md:relative top-full left-0 right-0 bg-gray-800 md:bg-transparent p-4 md:p-0 z-40">
+            <ul
+              class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 w-full md:w-auto">
+              <li>
+                <a
+                  href="/"
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >HOME</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./src/pages/aboutUs.html"
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./src/pages/service.html  "
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >SERVICE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./src/pages/menu.html"
+                  class="block py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >MENU</a
+                >
+              </li>
+              <li class="relative group">
+                <a
+                  href="#"
+                  class="py-2 px-4 hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md flex items-center justify-between w-full"
+                  >PAGES
+                  <svg
+                    class="ml-1 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </a>
+                <div
+                  class="absolute top-full left-0 z-30 min-w-[120px] bg-white text-gray-800 rounded-md shadow-lg p-2 hidden group-hover:block">
+                  <ul>
+                    <li>
+                      <a
+                        href="./src/pages/booking.html"
+                        class="block px-4 py-2 hover:bg-gray-300 rounded-md"
+                        >Booking</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="./src/pages/team.html"
+                        class="block px-4 py-2 hover:bg-gray-300 rounded-md"
+                        >Our Team</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="./src/pages/contact.html"
+                  class="block py-2 px-4 text-[#feaf39] hover:text-[#fea116] hover:bg-gray-700 md:hover:bg-transparent rounded-md"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+
+            <button
+              id="btn"
+              class="bg-[#fea116] text-white font-bold px-4 py-2 rounded-md hover:bg-yellow-600 transition duration-300 mt-4 md:mt-0 w-full md:w-auto">
+              BOOK A TABLE
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <div
       class="relative h-96 flex items-center justify-center text-center text-white">
@@ -154,6 +158,240 @@
       </div>
     </div>
 
+    <div class="container mx-auto py-16 px-12">
+      <div class="text-center mb-12">
+        <div class="flex items-center justify-center mb-2">
+          <div class="w-16 h-1 bg-[#fea116] mr-2"></div>
+          <h2 class="text-[#fea116] text-2xl font-semibold">Contact Us</h2>
+          <div class="w-16 h-1 bg-[#fea116] ml-2"></div>
+        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mt-2">
+          Contact For Any Query
+        </h1>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="flex flex-col text-left md:items-start">
+          <div class="flex items-center mb-2">
+            <h3 class="text-3xl font-semibold text-[#fea116]">Booking</h3>
+            <div class="w-16 h-1 bg-[#fea116] ml-2"></div>
+          </div>
+          <p class="text-xl text-gray-600 flex items-center">
+            <i class="fas fa-envelope mr-2 text-[#fea116]"></i> book@example.com
+          </p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="flex items-center justify-center mb-2">
+            <h3 class="text-3xl font-semibold text-[#fea116]">General</h3>
+            <div class="w-16 h-1 bg-[#fea116] ml-2"></div>
+          </div>
+          <p class="text-xl text-gray-600 flex items-center justify-center">
+            <i class="fas fa-envelope mr-2 text-[#fea116]"></i> info@example.com
+          </p>
+        </div>
+        <div class="flex flex-col text-left md:items-end md:text-right">
+          <div class="flex items-center md:justify-end mb-2">
+            <h3 class="text-3xl font-semibold text-[#fea116]">Technical</h3>
+            <div class="w-16 h-1 bg-[#fea116] ml-2"></div>
+          </div>
+          <p class="text-xl text-gray-600 flex items-center md:justify-end">
+            <i class="fas fa-envelope mr-2 text-[#fea116]"></i> tech@example.com
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="w-full h-96 lg:h-auto">
+          <iframe
+            class="w-full h-full rounded-md shadow-lg"
+            src="https://maps.google.com/maps?q=TOPAZ%20Norodom%20Boulevard%20Phnom%20Penh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="bg-white p-8 rounded-md shadow-lg">
+          <form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#fea116]" />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#fea116]" />
+              </div>
+            </div>
+            <div class="mb-6">
+              <input
+                type="text"
+                placeholder="Subject"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#fea116]" />
+            </div>
+            <div class="mb-6">
+              <textarea
+                placeholder="Message"
+                rows="6"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#fea116]"></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-[#fea116] text-white font-bold px-8 py-3 rounded-md hover:bg-yellow-600 transition duration-300 w-full">
+                SEND MESSAGE
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-[#1a202c] text-gray-300 py-10">
+      <div class="container mx-auto px-8">
+        <div class="flex flex-wrap justify-between -mx-4">
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Company <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <ul>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Contact Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Reservation</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:text-white flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-[#fea116] text-xs mr-2"></i
+                  >Terms & Condition</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Contact <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <ul>
+              <li class="mb-2 flex items-center">
+                <i class="fas fa-map-marker-alt text-[#fea116] mr-2"></i>Rupp,
+                Phnom Penh
+              </li>
+              <li class="mb-2 flex items-center">
+                <i class="fas fa-phone-alt text-[#fea116] mr-2"></i>096 429 6602
+              </li>
+              <li class="mb-2 flex items-center">
+                <i class="fas fa-envelope text-[#fea116] mr-2"></i
+                >restoran@gmail.com
+              </li>
+            </ul>
+            <div class="flex space-x-4 mt-4">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white border border-white rounded-full p-2 w-8 h-8 flex items-center justify-center"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Opening <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <ul>
+              <li class="mb-2">Monday - Saturday</li>
+              <li class="mb-2">09AM - 09PM</li>
+              <li class="mb-2">Sunday</li>
+              <li class="mb-2">10AM - 08PM</li>
+            </ul>
+          </div>
+
+          <div class="w-full md:w-1/4 px-4">
+            <h4
+              class="text-lg font-semibold text-[#fea116] mb-4 flex items-center">
+              Newsletter <span class="ml-2 w-12 h-0.5 bg-[#fea116]"></span>
+            </h4>
+            <p class="mb-4">
+              Dolor amet sit justo amet elitr clita ipsum elitrest.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="py-2 px-4 rounded-l-md flex-grow focus:outline-none text-gray-800" />
+              <button
+                class="bg-[#fea116] text-white py-2 px-4 rounded-r-md hover:bg-[#e09012]">
+                SIGNUP
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 flex flex-wrap justify-between items-center text-sm">
+          <div class="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
+            &copy; Restoran, All Right Reserved. Designed By
+            <a href="#" class="text-[#fea116] hover:underline">Restoran</a>
+          </div>
+          <div class="w-full md:w-auto text-center md:text-right">
+            <a href="#" class="text-gray-300 hover:text-white mx-2">Home</a>
+            <span class="text-gray-300 px-2">|</span>
+            <a href="#" class="text-gray-300 hover:text-white mx-2">Cookies</a>
+            <span class="text-gray-300 px-2">|</span>
+            <a href="#" class="text-gray-300 hover:text-white mx-2">Help</a>
+            <span class="text-gray-300 px-2">|</span>
+            <a href="#" class="text-gray-300 hover:text-white mx-2">FQAS</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       const button = document.getElementById("mobile-menu-button");
       const navLinks = document.getElementById("nav-links");
@@ -163,5 +401,6 @@
         navLinks.classList.toggle("flex");
       });
     </script>
+    <script src="/index.js"></script>
   </body>
 </html>
