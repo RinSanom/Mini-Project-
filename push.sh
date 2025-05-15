@@ -5,4 +5,4 @@ git add .
 git commit -m "$msg"
 git push -u origin  "$branch"
 
-echo "✅ Code pushed to Git successfully!"
+echo "✅ Code pushed to Git successfully! , on branch: $branch" 
