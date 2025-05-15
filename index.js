@@ -32,3 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counters.forEach((counter) => observer.observe(counter));
 });
+
+const header = document.getElementById("main-header");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("main-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      header.classList.add("bg-gray-900", "bg-opacity-90");
+    } else {
+      header.classList.remove("bg-gray-900", "bg-opacity-90");
+    }
+  });
+});
