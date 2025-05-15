@@ -1,6 +1,6 @@
 function animateCounter(el, target, duration = 2000) {
   let start = 0;
-  const increment = target / (duration / 16); // ~60fps
+  const increment = target / (duration / 16); // 60 FPS
   const counter = setInterval(() => {
     start += increment;
     if (start >= target) {
