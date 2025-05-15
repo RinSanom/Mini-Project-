@@ -161,40 +161,54 @@
           </div>
         </div>
       </section>
-      <section class="py-16 px-6 lg:px-20">
+      <section class="py-16 px-6 lg:px-20 bg-gray-100">
         <div
           class="container mx-auto flex flex-col lg:flex-row items-center gap-10">
           <!-- Illustration -->
           <div class="flex-1 text-center">
             <img
               src="/images/Sign up-bro.svg"
-              alt="Join us"
+              alt="Join us illustration"
               class="w-full max-w-md mx-auto" />
           </div>
+
           <!-- Booking Form -->
-          <div class="flex-1">
-            <div class="bg-[#0C1023] p-8 text-white rounded-md w-full">
-              <h2 class="text-2xl font-bold mb-6">Register</h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input class="p-3 rounded text-white" placeholder="Username" />
-                <input
-                  class="p-3 rounded text-black"
-                  placeholder="Email Address" />
-                <input
-                  class="p-3 rounded text-black"
-                  placeholder="Date and Time of Booking" />
-                <input
-                  class="p-3 rounded text-black"
-                  placeholder="Number of People" />
-              </div>
-              <textarea
-                class="w-full p-3 rounded text-black mb-4"
-                rows="4"
-                placeholder="Request Description"></textarea>
-              <button
-                class="bg-yellow-400 text-black px-6 py-3 rounded hover:bg-yellow-500 w-full">
-                Book Now
-              </button>
+          <div class="flex-1 w-full">
+            <div
+              class="bg-[#0C1023] p-8 text-white rounded-md shadow-lg w-full">
+              <h2 class="text-3xl font-bold mb-6 text-center">Register</h2>
+
+              <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    class="p-3 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    class="p-3 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                  <input
+                    type="datetime-local"
+                    placeholder="Date and Time"
+                    class="p-3 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                  <input
+                    type="number"
+                    placeholder="Number of People"
+                    class="p-3 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+                </div>
+
+                <textarea
+                  placeholder="Request Description"
+                  rows="4"
+                  class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+
+                <button
+                  type="submit"
+                  class="bg-yellow-400 text-black px-6 py-3 rounded hover:bg-yellow-500 w-full font-semibold transition">
+                  Book Now
+                </button>
+              </form>
             </div>
           </div>
         </div>
