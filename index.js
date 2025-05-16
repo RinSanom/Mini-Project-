@@ -46,3 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const button = document.getElementById("mobile-menu-button");
+const navLinks = document.getElementById("nav-links");
+
+button.addEventListener("click", () => {
+  navLinks.classList.toggle("hidden");
+  navLinks.classList.toggle("flex");
+});
